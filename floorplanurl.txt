@@ -1,0 +1,35 @@
+Placing a marker on the map
+$url = 'https://www.google.com/maps/place/' . $coords . '/@' . $coords . ',20z';
+
+
+Zoomed map, first floor -- normal
+https://www.google.com/maps/place/38.6367943,-90.2350798/@38.6367943,-90.2350798,20z/
+
+second floor
+data=!3m1!5s0x87d8b4bca1f57ac3:0x1e54ca82733a0075!4m5!3m4!1s0x0:0xfd4f92d64e89521d!8m2!3d38.636772!4d-90.234947 
+
+third floor
+data=!3m1!5s0x87d8b4bca1f57ab1:0x1e54ca82d4780074!4m5!3m4!1s0x0:0xfd4f92d64e89521d!8m2!3d38.636772!4d-90.234947
+
+Fourth floor
+data=!3m1!5s0x87d8b4bca1f57a9f:0x1e54ca827fa42c77!4m5!3m4!1s0x0:0xfd4f92d64e89521d!8m2!3d38.636772!4d-90.234947
+
+Fifth floor
+data=!3m1!5s0x87d8b4bca1f57ad1:0x1e54ca82bd388c79!4m5!3m4!1s0x0:0xfd4f92d64e89521d!8m2!3d38.636772!4d-90.234947
+
+Lower level
+data=!3m1!5s0x87d8b4bca1f92481:0x1e54ca826747f078!4m5!3m4!1s0x0:0xfd4f92d64e89521d!8m2!3d38.636772!4d-90.234947
+
+data=!3m1!5s0x87d8b4bca1f57ad1:0x1e54ca82bd388c79!4m5!3m4!1s0x0:0xfd4f92d64e89521d!8m2!3d38.636547!4d-90.235139
+
+flooraddr will be the hex links above with the call numbers at the end changed to match the shelf's call number
+
+
+New url, with different floors
+$url = 'https://www.google.com/maps/place/' . $coords . '/@' . $coords . ',20z' . $flooraddr . $latitude . '!4d' . $longitude; 
+
+
+
+
+test, fifth floor 38.636547,-90.2351390 bookshelf
+https://www.google.com/maps/place/38.636547,-90.2351390/@38.636547,-90.2351390,20z/data=!3m1!5s0x87d8b4bca1f57ad1:0x1e54ca82bd388c79!4m5!3m4!1s0x0:0xfd4f92d64e89521d!8m2!3d38.636547!4d-90.2351390
