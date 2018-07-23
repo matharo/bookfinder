@@ -28,14 +28,19 @@
 		if (mysqli_stmt_fetch($statement))
 		{
 			//Output all data from DB
+			//Query should only return one result
 			while (mysqli_stmt_fetch($statement)){
 				echo $lat. ', '. $long .', '. $floor . '</br>';
+				
+				checkType($lat);
+				checkType($long);
+				checkType($floor);
 			}
 		}
 		//No data from DB
 		else
 		{ 
-			echo 'Nothing was found'; 
+			echo 'Nothing was found from database with this query.'; 
 		}
 		
 		//Closing SQL query
@@ -44,5 +49,18 @@
 	else
 	{
 		echo 'Bad query.';
+	}
+	
+	//Makes sure variable from database is a string or integer
+	function checkType($var)
+	{
+		if (is_null($var))
+		{
+			error_log("Null variable",0);
+		}
+		if (!is_int($var) || !is_string)
+		{
+			error_log("Variable not string or int",0);
+		}
 	}
 ?>
