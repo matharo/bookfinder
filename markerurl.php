@@ -1,13 +1,12 @@
 <?php 
 
-	/* Generates a URL that puts a marker on Google Maps
-	* on the bookshelf that corresponds to the call number
+	/* Generates a URL that puts a marker on Google Maps on the bookshelf that corresponds to the call number.
+	* This code is included in index.php, which contains $lat, $long, $floor
 	* returns $markerurl
 	*/
 	
 
-	//Extract the book's coords and floor data from query results
-	//$lat, $long, $floor are from query.php
+	//Extract the book's coords and floor data from query results (inside index.php)
 	$booklat = $lat;
 	$booklng = $long;
 	$floor = $floor;
@@ -44,7 +43,7 @@
 	//Create a marker on the map
 	$markerurl = 'www.google.com/maps/place/' . $coords . '/@' . $coords . ',' . $zoomlevel . 'z/' . $flooraddr . $booklat . '!4d' . $booklng; 
 	
-	
+	//Determine what device the user is using
 	include 'detectDeviceType.php';
 	
 	//Add appropriate header to url depending on device type

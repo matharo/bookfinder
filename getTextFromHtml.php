@@ -30,7 +30,7 @@
 		}
 		else
 		{
-			die("Error. Call number exceed max length.")
+			die("Error. Call number exceed max length.");
 		}
 	}
 	else

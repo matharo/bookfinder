@@ -22,12 +22,15 @@
 	$conn = mysqli_connect($servername,$username,$password,$database);
 
 	//Checks connection status
-	if (!$conn){
+	if (!$conn)
+	{
 		die('Error. Connection failed.');
 	}
 	
 	//Checks database status
-	if (!$database){ss
+	if (!$database)
+	{
 		die('Error. Database not found. ');
 	}
+	
 ?>
