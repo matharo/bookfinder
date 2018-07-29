@@ -14,8 +14,6 @@
 	
 	$coords = $booklat . ',' . $booklng;
 		
-	echo 'Coords are: ' . $coords . '</br>' . 'Floor: ' . $floor;
-	
 	//Get appropriate hex URL address that displays the correct floor level
 	if ($floor == 2)
 	{
