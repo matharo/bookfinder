@@ -91,7 +91,7 @@
 
 /*--- Here begins code for the webpage that displays for mobile users ---*/	
 
-	if ($deviceType == 'desktop')
+	if ($deviceType == 'mobile')
 	{
 		echo include 'mobilePage.html';
 	}
